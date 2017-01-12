@@ -1,0 +1,53 @@
+<!-- ·         Get an image of a wheel and make it spin forever. The velocity should be controlled by slider (html native slider) (learn about css3 keyframes) -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>CSS Example Animation 3</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <style>
+        @-webkit-keyframes rotate {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        #wheels {
+            height: 100px;
+            width: 100px;
+            margin: 0 auto;
+            -webkit-animation-name: rotate;
+            animation-duration: 0.5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+        }
+
+        #slider {
+            transform: rotateY(180deg);
+            margin: 0 auto;
+        }
+    </style>
+
+    <!--
+  In the middle of the screen place a circle. It has to be on the very center. (learn about position absolute and border radius)
+  -->
+</head>
+
+<body>
+    <img id='wheels' src="wheels.png" alt="" />
+    <input id="slider" type="range" min="0.1" max='5.0' value="1.0" step="1" onchange="changeAnimation(this)" />
+
+    <script>
+        function changeAnimation(el) {
+            document.getElementById('wheels').style.animationDuration = slider.value + "s"
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!--       Make a square that morphs into a ball forever and make an animation that moves the object from one side to the other. -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>CSS Animation Example 4</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <style>
+
+
+        .square {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -100px;
+            border-radius: 50%;
+            background: radial-gradient(ellipse at center, #a90329 0%, #8f0222 44%, #6d0019 100%);
+            animation: 1s linear 0s squareToSphere, infinite linear 3s moveIt;
+        }
+
+        @keyframes squareToSphere {
+            0% {
+                border-radius: 0px;
+                background: red;
+            }
+            100% {
+                border-radius: 50%;
+                background: radial-gradient(ellipse at center, #a90329 0%, #8f0222 44%, #6d0019 100%);
+            }
+        }
+
+        @keyframes moveIt
+        {
+          0%   { left:0px;transform:rotate(0deg)}
+          50%  {left:100%;margin-right:10px; transform:rotate(360deg)}
+          100% {left:0px; transform:rotate(0deg)}
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="square "></div>
+</body>
+
+</html>

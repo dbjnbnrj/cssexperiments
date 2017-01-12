@@ -1,0 +1,117 @@
+<!--
+Make a hover menu using only ul, li and css. Hardcode a menu using nested ul and li and display them on mouse over.
+Followed tutorial : http://line25.com/tutorials/how-to-create-a-pure-css-dropdown-menu
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>CSS Animation Example 5</title>
+    <meta name="description" content="">
+    <meta name="author" content="SitePoint">
+
+    <style>
+        nav {
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        nav ul ul {
+            display: none;
+        }
+
+        nav ul li:hover>ul {
+            display: block;
+        }
+
+        nav ul {
+            background: black;
+            color: white;
+            padding: 0 20px;
+            border-radius: 10px;
+            list-style: none;
+            position: relative;
+            display: inline-table;
+        }
+
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li:hover {
+            background: gray;
+            color: white;
+        }
+
+
+        nav ul li a {
+            display: block;
+            padding: 25px 40px;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul ul {
+            background: gray;
+            border-radius: 0px;
+            padding: 0;
+            position: absolute;
+            top: 100%;
+        }
+
+        nav ul ul li {
+            float: none;
+            border-top: 1px solid #565656;
+            border-bottom: 1px solid #565656;
+            position: relative;
+        }
+
+        nav ul ul li a {
+            padding: 15px 40px;
+            color: white;
+        }
+
+        nav ul ul li a:hover {
+            background: #4b545f;
+        }
+
+        nav ul ul ul {
+            position: absolute;
+            left: 100%;
+            top: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Article</a>
+                <ul>
+                    <li><a href="#">Photoshop</a></li>
+                    <li><a href="#">Illustrator</a></li>
+                    <li><a href="#">Web Design</a>
+                        <ul>
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Articles</a>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">User Experience</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Inspiration</a></li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>
