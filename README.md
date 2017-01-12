@@ -1,5 +1,5 @@
 # This repo contains some CSS3 examples.
-# This is just a kind of hello world toolkit for me to test
+This is just a kind of hello world toolkit for me to test things in CSS
 
 ## Animations
 * Example 1: In the middle of the screen place a circle. It has to be on the very center. (learn about position absolute and border radius)
