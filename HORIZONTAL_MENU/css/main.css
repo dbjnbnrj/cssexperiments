@@ -1,0 +1,46 @@
+body{
+  background: #e0e0e0
+}
+
+h1{
+  font-size: 2em Georgia;
+}
+
+#container{
+  margin: 100px auto;
+  width: 960px;
+}
+
+.menu{
+  width: auto;
+  background-color: white;
+  border-bottom: 3px solid black;
+}
+.menu ul {
+  font: 1em Georgia;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu ul li {
+  display: inline-block;
+  padding: 10px 50px;
+  text-transform: uppercase;
+}
+
+.menu ul li a{
+    text-decoration: none;
+}
+
+.menu ul li a:hover{
+  color: maroon;
+}
+
+.selected{
+  background: black;
+}
+
+.selected a{
+  color: white;
+}
